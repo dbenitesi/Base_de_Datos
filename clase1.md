@@ -8,3 +8,4 @@
 FROM categoria, libro, autor 
 WHERE autor.id = 4
 AND libro.idautor = autor.id AND categoria.id = libro.idcategoria</p>
+<h1>Mostrar una consulta de los libros y el estado de la categoria a la que pertenece 
