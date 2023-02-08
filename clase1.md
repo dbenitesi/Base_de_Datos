@@ -9,3 +9,10 @@ FROM categoria, libro, autor
 WHERE autor.id = 4
 AND libro.idautor = autor.id AND categoria.id = libro.idcategoria</p>
 <h1>Mostrar una consulta de los libros y el estado de la categoria a la que pertenece 
+
+  SELECT libro.titulo, libro.id, autor.nombre as autor, autor.librospublicados, categoria.nombre as categoria, editorial.nombre as editorial, sexo.descripcion as sexo
+from autor
+LEFT JOIN sexo on autor.idsexo = sexo.id
+RIGHT JOIN libro on libro.idautor = autor.id
+LEFT JOIN categoria on libro.idcategoria = categoria.id
+LEFT JOIN editorial on libro.ideditorial = editorial.id;
