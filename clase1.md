@@ -25,5 +25,9 @@ LEFT JOIN categoria on libro.idcategoria = categoria.id
 LEFT JOIN editorial on libro.ideditorial = editorial.id
 WHERE categoria.estado = 1
   order BY categoria.nombre</p>
-
+<p>SELECT libro.titulo, prestamo.devuelto, prestamo.fecha_prestamo, prestamo.idusuario, prestamo.idlibro, usuario.nombre, usuario.cedula
+from prestamo 
+LEFT JOIN libro on prestamo.idlibro = libro.id 
+LEFT JOIN usuario on prestamo.idusuario = usuario.id 
+  WHERE prestamo.devuelto = 1;</p>
   
